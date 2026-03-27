@@ -789,11 +789,11 @@ local Library do
 			end
 		end
 
-		CustomFont:New("Monaco", 400, "Regular", {
+		CustomFont:New("Arial", 400, "Regular", {
 			Url = "https://github.com/matomo-org/travis-scripts/raw/refs/heads/master/fonts/Arial.ttf"
 		})
 
-		Library.Font = CustomFont:Get("Monaco")
+		Library.Font = CustomFont:Get("Arial")
 	end
 
 	Library.Holder = Instances:Create("ScreenGui", {
