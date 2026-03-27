@@ -94,7 +94,7 @@ local Library do
 		},
 
 		Images = {
-			["Logo"] = {"Logo.png", "https://github.com/rolesional/Enviro/blob/main/ui_library/assets/enviro_optimized.png?raw=true"},
+			["Logo"] = {"Logo.png", "https://raw.githubusercontent.com/Rolesional/Enviro/refs/heads/main/ui_library/assets/enviro_OAptimized.png"},
 			["Saturation"] = {"Saturation.png", "https://github.com/rolesional/Enviro/blob/main/ui_library/assets/Saturation.png?raw=true"},
 			["Value"] = {"Value.png", "https://github.com/rolesional/Enviro/blob/main/ui_library/assets/Value.png?raw=true"},
 			["Hue"] = {"Hue.png", "https://github.com/rolesional/Enviro/blob/main/ui_library/assets/Hue.png?raw=true"},
