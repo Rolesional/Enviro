@@ -1,8 +1,7 @@
 --[[
     scoot ui library
-    made by
-,
-    https://discord.gg/VhvTd5HV8dSSSFDSFGEWFGEWQ
+    made by samet
+    https://discord.gg/VhvTd5HV8d
 
     example/documentation is at the bottom
 ]]
@@ -5905,12 +5904,6 @@ local Library do
 				BackgroundColor3 = Library.Theme.Accent
 			})  Items["Liner"]:AddToTheme({BackgroundColor3  = "Accent"})
 
-			Instances:Create("UIGradient", {
-				Parent = Items["Glow"].Instance,
-				Name = "\0",
-				Rotation = 90,
-				Transparency = NumSequence{NumSequenceKeypoint(0, 0), NumSequenceKeypoint(0.193, 0.8687499761581421), NumSequenceKeypoint(0.504, 0.96875), NumSequenceKeypoint(1, 1)}
-			})
 
 			Items["Text"] = Instances:Create("TextLabel", {
 				Parent = Items["Section"].Instance,
