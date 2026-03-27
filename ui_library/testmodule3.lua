@@ -133,7 +133,7 @@ local Library do
 		Holder = nil,
 		NotifHolder = nil,
 		UnusedHolder = nil,
-		Font = nil,
+		Font = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal),
 		KeyList = nil,
 
 		Colorpickers = { },
@@ -1198,7 +1198,7 @@ local Library do
 				Items["Text"] = Instances:Create("TextLabel", {
 					Parent = Items["Inactive"].Instance,
 					Name = "\0",
-					FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal),
+					FontFace = Library.Font,
 					TextColor3 = FromRGB(200, 200, 200),
 					Text = Data.Name,
 					AnchorPoint = Vector2New(0, 0.5),
@@ -5184,25 +5184,6 @@ local Library do
 				BorderSizePixel = 0,
 			})
 
-			Items["MasterSwitch"] = Instances:Create("Frame", {
-				Parent = Items["Header"].Instance,
-				Name = "\0",
-				Position = UDim2New(0, 15, 0.5, 0),
-				AnchorPoint = Vector2New(0, 0.5),
-				Size = UDim2New(0, 150, 0, 25),
-				BackgroundTransparency = 1,
-			})
-
-			local MasterToggle, MasterToggleItems = Components:Toggle({
-				Name = "Master switch",
-				Parent = Items["MasterSwitch"],
-				Default = true,
-				Flag = "MasterSwitch",
-				Callback = function(Value)
-					Library.Toggled = Value
-				end
-			})
-
 			Items["Search"] = Instances:Create("Frame", {
 				Parent = Items["Header"].Instance,
 				Name = "\0",
@@ -5244,13 +5225,60 @@ local Library do
 				Parent = Items["Side"].Instance,
 				Name = "\0",
 				BackgroundTransparency = 1,
-				Position = UDim2New(0, 0, 0, 70),
-				Size = UDim2New(1, 0, 1, -100),
+				Position = UDim2New(0, 0, 0, 55),
+				Size = UDim2New(1, 0, 1, -120),
 				ScrollBarThickness = IsMobile and 0 or nil,
 				AutomaticCanvasSize = nil,
 				CanvasSize = nil,
 				BorderSizePixel = 0,
 			})
+
+			Items["UserProfile"] = Instances:Create("Frame", {
+				Parent = Items["Side"].Instance,
+				Name = "\0",
+				Position = UDim2New(0, 10, 1, -10),
+				AnchorPoint = Vector2New(0, 1),
+				Size = UDim2New(1, -20, 0, 45),
+				BackgroundColor3 = FromRGB(25, 25, 25),
+				BorderColor3 = Library.Theme.Border,
+				BorderSizePixel = 1,
+			})  Items["UserProfile"]:AddToTheme({BackgroundColor3 = "Inline", BorderColor3 = "Border"})
+
+			Items["UserAvatar"] = Instances:Create("ImageLabel", {
+				Parent = Items["UserProfile"].Instance,
+				Name = "\0",
+				Size = UDim2New(0, 35, 0, 35),
+				Position = UDim2New(0, 5, 0.5, 0),
+				AnchorPoint = Vector2New(0, 0.5),
+				BackgroundTransparency = 1,
+				Image = Players:GetUserThumbnailAsync(LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+			})
+
+			Items["UserName"] = Instances:Create("TextLabel", {
+				Parent = Items["UserProfile"].Instance,
+				Name = "\0",
+				FontFace = Library.Font,
+				Text = LocalPlayer.DisplayName,
+				TextColor3 = Library.Theme.Text,
+				TextSize = 10,
+				Position = UDim2New(0, 45, 0.3, 0),
+				AnchorPoint = Vector2New(0, 0.5),
+				BackgroundTransparency = 1,
+				TextXAlignment = Enum.TextXAlignment.Left,
+			})  Items["UserName"]:AddToTheme({TextColor3 = "Text"})
+
+			Items["UserExtra"] = Instances:Create("TextLabel", {
+				Parent = Items["UserProfile"].Instance,
+				Name = "\0",
+				FontFace = Library.Font,
+				Text = "@" .. LocalPlayer.Name,
+				TextColor3 = Library.Theme["Placeholder Text"],
+				TextSize = 8,
+				Position = UDim2New(0, 45, 0.7, 0),
+				AnchorPoint = Vector2New(0, 0.5),
+				BackgroundTransparency = 1,
+				TextXAlignment = Enum.TextXAlignment.Left,
+			})  Items["UserExtra"]:AddToTheme({TextColor3 = "Placeholder Text"})
 
 			Instances:Create("UIListLayout", {
 				Parent = Items["Pages"].Instance,
