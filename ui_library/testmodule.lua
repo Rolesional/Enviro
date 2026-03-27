@@ -1,7 +1,7 @@
 --[[
     scoot ui library
     made by samet
-    https://discord.gg/VhvTd5HV8d
+    https://discord.gg/VhvTd5HV8dSSSFDSFGEWFGEWQ
 
     example/documentation is at the bottom
 ]]
@@ -5202,6 +5202,43 @@ local Library do
 					Library.Toggled = Value
 				end
 			})
+
+			Items["Search"] = Instances:Create("Frame", {
+				Parent = Items["Header"].Instance,
+				Name = "\0",
+				AnchorPoint = Vector2New(1, 0.5),
+				Position = UDim2New(1, -15, 0.5, 0),
+				Size = UDim2New(0, 150, 0, 22),
+				BackgroundColor3 = FromRGB(35, 35, 35),
+				BorderColor3 = Library.Theme.Border,
+				BorderSizePixel = 1,
+			})  Items["Search"]:AddToTheme({BackgroundColor3 = "Inline", BorderColor3 = "Border"})
+
+			Items["Input"] = Instances:Create("TextBox", {
+				Parent = Items["Search"].Instance,
+				Name = "\0",
+				FontFace = Library.Font,
+				Text = "",
+				PlaceholderText = "Search...",
+				PlaceholderColor3 = Library.Theme["Placeholder Text"],
+				TextColor3 = Library.Theme.Text,
+				TextSize = 9,
+				Size = UDim2New(1, -10, 1, 0),
+				Position = UDim2New(0, 5, 0, 0),
+				BackgroundTransparency = 1,
+				TextXAlignment = Enum.TextXAlignment.Left,
+				ClearTextOnFocus = false,
+			})  Items["Input"]:AddToTheme({TextColor3 = "Text", PlaceholderColor3 = "Placeholder Text"})
+
+			Items["SearchStroke"] = Instances:Create("UIStroke", {
+				Parent = Items["Search"].Instance,
+				Name = "\0",
+				Color = Library.Theme.Outline,
+				Thickness = 1,
+				LineJoinMode = Enum.LineJoinMode.Miter,
+				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+				Transparency = 0.4
+			})  Items["SearchStroke"]:AddToTheme({Color = "Outline"})
 
 			Items["Pages"] = Instances:Create(IsMobile and "ScrollingFrame" or "Frame", {
 				Parent = Items["Side"].Instance,
