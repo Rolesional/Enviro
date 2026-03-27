@@ -5157,7 +5157,7 @@ local Library do
 				Name = "\0",
 				FontFace = Library.Font,
 				RichText = true,
-				Text = '<font color="rgb(235, 76, 48)">eXPECT</font><font color="rgb(255, 255, 255)">ional</font>',
+				Text = '<font color="rgb(235, 76, 48)">   expect</font><font color="rgb(255, 255, 255)">ional</font>',
 				TextSize = 18,
 				BackgroundTransparency = 1,
 				Position = UDim2New(0, 15, 0, 15),
