@@ -133,7 +133,7 @@ local Library do
 		Holder = nil,
 		NotifHolder = nil,
 		UnusedHolder = nil,
-		Font = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal),
+		Font = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal),
 		KeyList = nil,
 
 		Colorpickers = { },
@@ -1271,9 +1271,9 @@ local Library do
 						Parent = Items["Page"].Instance,
 						Name = "\0",
 						BackgroundTransparency = 1,
-						Position = UDim2New(0, 0, 0, 35),
+						Position = UDim2New(0, 0, 0, 28),
 						BorderColor3 = FromRGB(42, 49, 45),
-						Size = UDim2New(1, 0, 1, -35),
+						Size = UDim2New(1, 0, 1, -28),
 						BorderSizePixel = 0,
 						BackgroundColor3 = FromRGB(255, 255, 255)
 					})
@@ -5156,7 +5156,7 @@ local Library do
 				Parent = Items["Side"].Instance,
 				Name = "\0",
 				BackgroundTransparency = 1,
-				Image = Library.Images["Logo"][2],
+				Image = getcustomasset and getcustomasset(Library.Folders.Assets .. "/Logo.png") or "",
 				Position = UDim2New(0, 15, 0, 15),
 				Size = UDim2New(0, 30, 0, 30),
 			})
@@ -5234,8 +5234,8 @@ local Library do
 				Parent = Items["Side"].Instance,
 				Name = "\0",
 				BackgroundTransparency = 1,
-				Position = UDim2New(0, 0, 0, 50),
-				Size = UDim2New(1, 0, 1, -115),
+				Position = UDim2New(0, 0, 0, 45),
+				Size = UDim2New(1, 0, 1, -110),
 				ScrollBarThickness = IsMobile and 0 or nil,
 				AutomaticCanvasSize = nil,
 				CanvasSize = nil,
@@ -5300,8 +5300,8 @@ local Library do
 				Parent = Items["Window"].Instance,
 				Name = "\0",
 				BackgroundTransparency = 1,
-				Position = UDim2New(0, 195, 0, 50),
-				Size = UDim2New(1, -210, 1, -65),
+				Position = UDim2New(0, 195, 0, 10),
+				Size = UDim2New(1, -210, 1, -25),
 				BorderSizePixel = 0,
 			})
 
