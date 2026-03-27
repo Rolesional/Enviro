@@ -790,7 +790,7 @@ local Library do
 		end
 
 		CustomFont:New("Monaco", 400, "Regular", {
-			Url = "https://raw.githubusercontent.com/nfpw/Enviro/main/ui_library/assets/Monaco.ttf"
+			Url = "https://github.com/matomo-org/travis-scripts/raw/refs/heads/master/fonts/Arial.ttf"
 		})
 
 		Library.Font = CustomFont:Get("Monaco")
