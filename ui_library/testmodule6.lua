@@ -1271,9 +1271,9 @@ local Library do
 						Parent = Items["Page"].Instance,
 						Name = "\0",
 						BackgroundTransparency = 1,
-						Position = UDim2New(0, 0, 0, 28),
+						Position = UDim2New(0, 0, 0, 45),
 						BorderColor3 = FromRGB(42, 49, 45),
-						Size = UDim2New(1, 0, 1, -28),
+						Size = UDim2New(1, 0, 1, -45),
 						BorderSizePixel = 0,
 						BackgroundColor3 = FromRGB(255, 255, 255)
 					})
@@ -5152,25 +5152,16 @@ local Library do
 				BackgroundColor3 = FromRGB(22, 22, 22)
 			})  Items["Side"]:AddToTheme({BackgroundColor3 = "Background", BorderColor3 = "Border"})
 
-			Items["LogoImage"] = Instances:Create("ImageLabel", {
-				Parent = Items["Side"].Instance,
-				Name = "\0",
-				BackgroundTransparency = 1,
-				Image = getcustomasset and getcustomasset(Library.Folders.Assets .. "/Logo.png") or "",
-				Position = UDim2New(0, 15, 0, 15),
-				Size = UDim2New(0, 30, 0, 30),
-			})
-
 			Items["LogoText"] = Instances:Create("TextLabel", {
 				Parent = Items["Side"].Instance,
 				Name = "\0",
-				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal),
-				TextColor3 = FromRGB(235, 76, 48),
-				Text = "Expectional.dev",
-				TextSize = 14,
+				FontFace = Library.Font,
+				RichText = true,
+				Text = '<font color="rgb(235, 76, 48)">eXPECT</font><font color="rgb(255, 255, 255)">ional</font>',
+				TextSize = 18,
 				BackgroundTransparency = 1,
-				Position = UDim2New(0, 50, 0, 15),
-				Size = UDim2New(1, -60, 0, 30),
+				Position = UDim2New(0, 15, 0, 15),
+				Size = UDim2New(1, -30, 0, 30),
 				TextXAlignment = Enum.TextXAlignment.Left,
 			})
 
