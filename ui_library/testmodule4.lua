@@ -1242,7 +1242,7 @@ local Library do
 					Items["SubPages"] = Instances:Create("Frame", {
 						Parent = Items["Page"].Instance,
 						Name = "\0",
-						Size = UDim2New(0, 0, 0, 35),
+						Size = UDim2New(0, 0, 0, 28),
 						BorderColor3 = FromRGB(42, 49, 45),
 						BorderSizePixel = 2,
 						AutomaticSize = Enum.AutomaticSize.X,
@@ -1271,9 +1271,9 @@ local Library do
 						Parent = Items["Page"].Instance,
 						Name = "\0",
 						BackgroundTransparency = 1,
-						Position = UDim2New(0, 0, 0, 51),
+						Position = UDim2New(0, 0, 0, 35),
 						BorderColor3 = FromRGB(42, 49, 45),
-						Size = UDim2New(1, 0, 1, -51),
+						Size = UDim2New(1, 0, 1, -35),
 						BorderSizePixel = 0,
 						BackgroundColor3 = FromRGB(255, 255, 255)
 					})
@@ -5152,17 +5152,26 @@ local Library do
 				BackgroundColor3 = FromRGB(22, 22, 22)
 			})  Items["Side"]:AddToTheme({BackgroundColor3 = "Background", BorderColor3 = "Border"})
 
-			Items["Logo"] = Instances:Create("TextLabel", {
+			Items["LogoImage"] = Instances:Create("ImageLabel", {
+				Parent = Items["Side"].Instance,
+				Name = "\0",
+				BackgroundTransparency = 1,
+				Image = Library.Images["Logo"][2],
+				Position = UDim2New(0, 15, 0, 15),
+				Size = UDim2New(0, 30, 0, 30),
+			})
+
+			Items["LogoText"] = Instances:Create("TextLabel", {
 				Parent = Items["Side"].Instance,
 				Name = "\0",
 				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal),
 				TextColor3 = FromRGB(235, 76, 48),
-				Text = "eXPECTional",
-				TextSize = 18,
+				Text = "Expectional.dev",
+				TextSize = 14,
 				BackgroundTransparency = 1,
-				Position = UDim2New(0.5, 0, 0, 25),
-				AnchorPoint = Vector2New(0.5, 0.5),
-				Size = UDim2New(1, 0, 0, 50),
+				Position = UDim2New(0, 50, 0, 15),
+				Size = UDim2New(1, -60, 0, 30),
+				TextXAlignment = Enum.TextXAlignment.Left,
 			})
 
 			Items["TopAccent"] = Instances:Create("Frame", {
@@ -5225,8 +5234,8 @@ local Library do
 				Parent = Items["Side"].Instance,
 				Name = "\0",
 				BackgroundTransparency = 1,
-				Position = UDim2New(0, 0, 0, 55),
-				Size = UDim2New(1, 0, 1, -120),
+				Position = UDim2New(0, 0, 0, 50),
+				Size = UDim2New(1, 0, 1, -115),
 				ScrollBarThickness = IsMobile and 0 or nil,
 				AutomaticCanvasSize = nil,
 				CanvasSize = nil,
@@ -5291,8 +5300,8 @@ local Library do
 				Parent = Items["Window"].Instance,
 				Name = "\0",
 				BackgroundTransparency = 1,
-				Position = UDim2New(0, 195, 0, 60),
-				Size = UDim2New(1, -210, 1, -75),
+				Position = UDim2New(0, 195, 0, 50),
+				Size = UDim2New(1, -210, 1, -65),
 				BorderSizePixel = 0,
 			})
 
