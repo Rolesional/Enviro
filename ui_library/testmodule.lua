@@ -1,6 +1,7 @@
 --[[
     scoot ui library
-    made by samet
+    made by
+,
     https://discord.gg/VhvTd5HV8dSSSFDSFGEWFGEWQ
 
     example/documentation is at the bottom
