@@ -2016,9 +2016,9 @@ local Library do
 					Text = "",
 					Name = "\0",
 					AnchorPoint = Vector2New(0, 1),
-					Position = UDim2New(0, 0, 1, -5),
+					Position = UDim2New(0, 0, 1, -8),
 					BorderColor3 = Library.Theme.Border,
-					Size = UDim2New(1, 0, 0, 2),
+					Size = UDim2New(1, 0, 0, 6),
 					BorderSizePixel = 0,
 					BackgroundColor3 = FromRGB(45, 45, 45)
 				})  Items["RealSlider"]:AddToTheme({BackgroundColor3 = "Outline", BorderColor3 = "Border"})
@@ -2038,7 +2038,7 @@ local Library do
 					AnchorPoint = Vector2New(0.5, 0.5),
 					Position = UDim2New(1, 0, 0.5, 0),
 					BorderColor3 = FromRGB(0, 0, 0),
-					Size = UDim2New(0, 4, 0, 8),
+					Size = UDim2New(0, 4, 0, 12),
 					BorderSizePixel = 0,
 					BackgroundColor3 = FromRGB(240, 240, 240)
 				})  Items["Dragger"]:AddToTheme({BackgroundColor3 = "Text"})
@@ -5157,7 +5157,7 @@ local Library do
 				Name = "\0",
 				FontFace = Library.Font,
 				RichText = true,
-				Text = '<font color="rgb(235, 76, 48)">   expect</font><font color="rgb(255, 255, 255)">ional</font>',
+				Text = '<font color="rgb(235, 76, 48)">    eXPECT</font><font color="rgb(255, 255, 255)">ional</font>',
 				TextSize = 18,
 				BackgroundTransparency = 1,
 				Position = UDim2New(0, 15, 0, 15),
